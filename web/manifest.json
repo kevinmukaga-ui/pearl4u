@@ -1,0 +1,11 @@
+{
+  "name": "Pearl4U",
+  "short_name": "Pearl4U",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F8F6EF",
+  "theme_color": "#174D38",
+  "description": "Discover the Pearl of Africa tourism and nature guide.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
