@@ -12,9 +12,9 @@ class EditProfileScreen extends StatefulWidget {
 }
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
-  final _nameController = TextEditingController(text: 'Samuel Raymond');
-  final _emailController = TextEditingController(text: 'raymond@example.com');
-  final _phoneController = TextEditingController(text: '+256 700 123456');
+  final _nameController = TextEditingController(text: 'Mpotaima Ziriyah');
+  final _emailController = TextEditingController(text: 'mpotaimaziriyah@gmail.com');
+  final _phoneController = TextEditingController(text: '+256 782 496128');
   bool _isSaving = false;
 
   @override
@@ -63,7 +63,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     radius: 46,
                     backgroundColor: AppColors.sage,
                     child: Text(
-                      'SR',
+                      'MZ',
                       style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.w700,

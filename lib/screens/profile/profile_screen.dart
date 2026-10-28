@@ -37,7 +37,7 @@ class ProfileScreen extends StatelessWidget {
                     radius: 32,
                     backgroundColor: AppColors.sage,
                     child: Text(
-                      'SR',
+                      'MZ',
                       style: AppTypography.cardHeading.copyWith(
                         color: AppColors.jungle,
                         fontWeight: FontWeight.w700,
@@ -50,12 +50,12 @@ class ProfileScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Samuel Raymond',
+                          'Mpotaima Ziriyah',
                           style: AppTypography.cardHeading,
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'raymond@example.com',
+                          'mpotaimaziriyah@gmail.com',
                           style: AppTypography.caption,
                         ),
                         const SizedBox(height: 8),
