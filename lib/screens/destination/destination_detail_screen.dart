@@ -76,13 +76,16 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
               background: Stack(
                 fit: StackFit.expand,
                 children: [
-                  Image.network(
-                    d.imageUrl,
-                    fit: BoxFit.cover,
-                    errorBuilder: (ctx, err, stack) => Container(
-                      color: AppColors.forest,
-                      child: const Center(
-                        child: Icon(Icons.landscape, size: 60, color: AppColors.white),
+                  Hero(
+                    tag: 'dest-',
+                    child: Image.network(
+                      d.imageUrl,
+                      fit: BoxFit.cover,
+                      errorBuilder: (ctx, err, stack) => Container(
+                        color: AppColors.forest,
+                        child: const Center(
+                          child: Icon(Icons.landscape, size: 60, color: AppColors.white),
+                        ),
                       ),
                     ),
                   ),
