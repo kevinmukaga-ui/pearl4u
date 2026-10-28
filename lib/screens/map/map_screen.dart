@@ -36,11 +36,11 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
     if (_activeCategory == 'All') return _allDestinations;
     return _allDestinations.where((d) {
       if (_activeCategory == 'National Parks') return d.category == 'National Parks';
-      if (_activeCategory == 'Waterfalls') return d.category == 'Waterfalls' || d.name.contains('Falls');
-      if (_activeCategory == 'Mountains') return d.category == 'Mountains';
-      if (_activeCategory == 'Wildlife') return d.category == 'Wildlife';
+      if (_activeCategory == 'Waterfalls') return d.category == 'Waterfalls';
       if (_activeCategory == 'Lakes') return d.category == 'Lakes';
-      return true;
+      if (_activeCategory == 'Mountains') return d.category == 'Mountains';
+      if (_activeCategory == 'Cultural Sites') return d.category == 'Cultural Sites';
+      return d.category == _activeCategory;
     }).toList();
   }
 
@@ -304,9 +304,9 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                         _buildFilterChip('All'),
                         _buildFilterChip('National Parks'),
                         _buildFilterChip('Waterfalls'),
-                        _buildFilterChip('Mountains'),
-                        _buildFilterChip('Wildlife'),
                         _buildFilterChip('Lakes'),
+                        _buildFilterChip('Mountains'),
+                        _buildFilterChip('Cultural Sites'),
                       ],
                     ),
                   ),
