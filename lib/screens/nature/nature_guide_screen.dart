@@ -113,12 +113,15 @@ class _NatureGuideScreenState extends State<NatureGuideScreen> {
                         child: SizedBox(
                           width: 84,
                           height: 84,
-                          child: Image.network(
-                            species.imageUrl,
-                            fit: BoxFit.cover,
-                            errorBuilder: (ctx, err, stack) => Container(
-                              color: AppColors.sage,
-                              child: const Icon(Icons.pets, color: AppColors.forest),
+                          child: Hero(
+                            tag: 'species-' + species.id,
+                            child: Image.network(
+                              species.imageUrl,
+                              fit: BoxFit.cover,
+                              errorBuilder: (ctx, err, stack) => Container(
+                                color: AppColors.sage,
+                                child: const Icon(Icons.pets, color: AppColors.forest),
+                              ),
                             ),
                           ),
                         ),

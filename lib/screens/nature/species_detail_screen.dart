@@ -33,13 +33,16 @@ class SpeciesDetailScreen extends StatelessWidget {
               background: Stack(
                 fit: StackFit.expand,
                 children: [
-                  Image.network(
-                    species.imageUrl,
-                    fit: BoxFit.cover,
-                    errorBuilder: (ctx, err, stack) => Container(
-                      color: AppColors.forest,
-                      child: const Center(
-                        child: Icon(Icons.pets, size: 64, color: AppColors.white),
+                  Hero(
+                    tag: 'species-' + species.id,
+                    child: Image.network(
+                      species.imageUrl,
+                      fit: BoxFit.cover,
+                      errorBuilder: (ctx, err, stack) => Container(
+                        color: AppColors.forest,
+                        child: const Center(
+                          child: Icon(Icons.pets, size: 64, color: AppColors.white),
+                        ),
                       ),
                     ),
                   ),
