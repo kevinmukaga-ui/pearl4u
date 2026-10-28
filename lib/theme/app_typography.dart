@@ -17,7 +17,7 @@ class AppTypography {
   static const TextStyle pageTitle = TextStyle(
     fontSize: 28,
     height: 31 / 28,
-    fontWeight: FontWeight.w750,
+    fontWeight: FontWeight.w700,
     color: AppColors.jungle,
     letterSpacing: -0.3,
   );
