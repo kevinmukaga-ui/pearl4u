@@ -67,14 +67,14 @@ lib/
 
 ## 👥 Contributor Attribution & Modules
 
-| Contributor | Email / Git Identity | Assigned Module & Deliverables |
+| Contributor Name | Dedicated Feature Branch | Assigned Module & Deliverables |
 | :--- | :--- | :--- |
-| **Mpotaima Ziriyah** | `mpotaimaziriyah@gmail.com` | **Design System Foundations**: Color tokens (`AppColors`), Typography scale (`AppTypography`), Light theme (`AppTheme`), `PrimaryButton`, `SecondaryButton`, `CustomTextField`, `StatusPill`. |
-| **Namuyaba Precious Mary** | `namuyabaprecious1@gmail.com` | **Authentication & Onboarding**: `WelcomeScreen`, `SignInScreen`, `ForgotPasswordScreen`. |
-| **Mukaga Kevin Wanyama** | `kevinmukaga@gmail.com` | **Registration & User Profile**: `CreateAccountScreen`, `ProfileScreen`, `EditProfileScreen`. |
-| **Kirabo Isaac** | `2400724078@mubs.ac.ug` | **Navigation Shell & Explore Feed**: `MainNavScreen`, `ExploreScreen`, `FilterSheet`, `DestinationCard`, and `Category` models. |
-| **Nankanja Sarah** | `2400722937@mubs.ac.ug` | **Destinations & Interactive Maps**: `DestinationDetailScreen` (Murchison Falls) and `MapScreen` (Uganda interactive pins & preview cards). |
-| **Manana James Joshua** | `jamesjoshua256@gmail.com` | **Nature Guide & Saved Places**: `NatureGuideScreen`, `SpeciesDetailScreen` (Mountain Gorilla), `SavedPlacesScreen`, `Species` model, and `main.dart`. |
+| **Mukaga Kevin Wanyama** *(Team Lead)* | `feature/registration-and-profile` | **Registration & User Profile**: `CreateAccountScreen`, `ProfileScreen`, `EditProfileScreen`, and project orchestration. |
+| **Mpotaima Ziriyah** | `feature/design-system-and-theme` | **Design System Foundations**: Color tokens (`AppColors`), Typography scale (`AppTypography`), Light theme (`AppTheme`), `PrimaryButton`, `SecondaryButton`, `CustomTextField`, `StatusPill`. |
+| **Namuyaba Precious Mary** | `feature/auth-and-welcome` | **Authentication & Onboarding**: `WelcomeScreen`, `SignInScreen`, `ForgotPasswordScreen`. |
+| **Kirabo Isaac** | `feature/navigation-and-explore` | **Navigation Shell & Explore Feed**: `MainNavScreen`, `ExploreScreen`, `FilterSheet`, `DestinationCard`, and `Category` models. |
+| **Nankanja Sarah** | `feature/destination-and-maps` | **Destinations & Interactive Maps**: `DestinationDetailScreen` (Murchison Falls) and `MapScreen` (Uganda interactive pins & preview cards). |
+| **Manana James Joshua** | `feature/nature-guide-and-saved` | **Nature Guide & Saved Places**: `NatureGuideScreen`, `SpeciesDetailScreen` (Mountain Gorilla), `SavedPlacesScreen`, `Species` model, and `main.dart`. |
 
 ---
 
