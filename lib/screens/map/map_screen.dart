@@ -40,6 +40,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
       if (_activeCategory == 'Lakes') return d.category == 'Lakes';
       if (_activeCategory == 'Mountains') return d.category == 'Mountains';
       if (_activeCategory == 'Cultural Sites') return d.category == 'Cultural Sites';
+      if (_activeCategory == 'Wildlife') return d.category == 'Wildlife';
       return d.category == _activeCategory;
     }).toList();
   }
@@ -92,7 +93,6 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
       case MapLayerStyle.terrain:
         return 'https://tile.opentopomap.org/{z}/{x}/{y}.png';
       case MapLayerStyle.streets:
-      default:
         return 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
     }
   }
@@ -307,6 +307,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                         _buildFilterChip('Lakes'),
                         _buildFilterChip('Mountains'),
                         _buildFilterChip('Cultural Sites'),
+                        _buildFilterChip('Wildlife'),
                       ],
                     ),
                   ),
