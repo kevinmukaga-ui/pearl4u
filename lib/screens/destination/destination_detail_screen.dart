@@ -183,62 +183,174 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Overview / Editorial
-                  Text('Overview', style: AppTypography.sectionHeading),
-                  const SizedBox(height: 8),
-                  Text(
-                    d.description,
-                    style: AppTypography.body.copyWith(
-                      color: AppColors.charcoal,
-                      height: 1.5,
-                      fontSize: 15,
+                  // 7. Callout Card 2: "Leave a lighter footprint"
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: AppColors.sage,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.eco_outlined,
+                            color: AppColors.forest,
+                            size: 22,
+                          ),
+                          SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Leave a lighter footprint',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.forest,
+                                  ),
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  'Keep wildlife wild: give animals space, take litter with you and follow your guides advice. Protected habitats depend on thoughtful visitors.',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Color(0xFF2D3748),
+                                    height: 1.4,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 28),
+
+                  // 8. Section: "Find your way"
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Find your way',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFF1E2922),
+                            letterSpacing: -0.2,
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+
+                        // Custom Stylized Illustrated Map Card
+                        Container(
+                          width: double.infinity,
+                          height: 160,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFE5EDE3),
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(color: const Color(0xFFD6E3D3), width: 1.0),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Stack(
+                              children: [
+                                // River curve graphic
+                                Positioned.fill(
+                                  child: CustomPaint(
+                                    painter: _IllustrativeMapPainter(),
+                                  ),
+                                ),
+
+                                // Top left title label
+                                Positioned(
+                                  top: 14,
+                                  left: 14,
+                                  child: Text(
+                                    d.name,
+                                    style: const TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w700,
+                                      color: AppColors.forest,
+                                    ),
+                                  ),
+                                ),
+
+                                // Center Pin badge
+                                Positioned(
+                                  top: 64,
+                                  left: 0,
+                                  right: 0,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Container(
+                                        width: 32,
+                                        height: 32,
+                                        decoration: const BoxDecoration(
+                                          color: AppColors.forest,
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: const Icon(
+                                          Icons.location_on,
+                                          color: Colors.white,
+                                          size: 18,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 4),
+                                      Text(
+                                        d.name.split(' ').take(2).join(' '),
+                                        style: const TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.w600,
+                                          color: AppColors.forest,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                // Bottom left watermark
+                                const Positioned(
+                                  bottom: 12,
+                                  left: 14,
+                                  child: Text(
+                                    'Illustrative map · not live',
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      color: Color(0xFF5A6860),
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+
+                        // Subtitle note
+                        const Text(
+                          'Illustrative map · not live. Location shown is approximate.',
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: Color(0xFF7A8880),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(height: 24),
 
-                  // Top Activities
-                  if (d.activities.isNotEmpty) ...[
-                    Text('Experiences & Activities', style: AppTypography.sectionHeading),
-                    const SizedBox(height: 12),
-                    Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children: d.activities.map((act) {
-                        return Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                          decoration: BoxDecoration(
-                            color: AppColors.sage.withOpacity(0.5),
-                            borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: AppColors.forest.withOpacity(0.2)),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Icon(Icons.check_circle_outline_rounded, size: 16, color: AppColors.forest),
-                              const SizedBox(width: 6),
-                              Text(
-                                act,
-                                style: AppTypography.actionLabel.copyWith(
-                                  color: AppColors.jungle,
-                                  fontSize: 13,
-                                ),
-                              ),
-                            ],
-                          ),
-                        );
-                      }).toList(),
-                    ),
-                    const SizedBox(height: 24),
-                  ],
-
-                  // Directions & Navigation Handoff Card
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: AppColors.white,
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(color: AppColors.border),
-                    ),
+                  // 9. Buttons
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       children: [
                         Container(
@@ -306,4 +418,32 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
       ],
     );
   }
+}
+
+class _IllustrativeMapPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final river = Path()
+      ..moveTo(size.width * 0.12, size.height * 0.78)
+      ..cubicTo(
+        size.width * 0.32,
+        size.height * 0.56,
+        size.width * 0.52,
+        size.height * 0.92,
+        size.width * 0.88,
+        size.height * 0.28,
+      );
+
+    canvas.drawPath(
+      river,
+      Paint()
+        ..color = const Color(0xFFB7D7CE)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 12
+        ..strokeCap = StrokeCap.round,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _IllustrativeMapPainter oldDelegate) => false;
 }
